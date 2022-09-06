@@ -15,3 +15,14 @@
 - Object.values - O(N)
 - object.entries - O(N)
 - hasOwnProperty - O(1)
+
+## Big O of Arrays
+
+- Insertion
+  - Push - O(1)
+  - Shift - O(N)
+- Removal
+  - Pop - O(1)
+  - Unshift - O(N)
+- Searching - O(N)
+- Access - O(1)
