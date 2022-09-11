@@ -1,9 +1,9 @@
 # 문제 해결 접근법
 
-## Problem Solving
+## 1) Understand the problem
 
-1. Understand the problem
-2. Explore concrete examples
-3. Break it down
-4. Solve/Simplify
-5. Look back and refactor
+1. 내 방식대로 다시 생각할 수 있나?
+2. 어떤 입력값을 가지고 있는가?
+3. 어떤 출력값을 반환해야 하는가?
+4. 해결할 충분한 정보가 주어졌는가?
+5. 정말 중요한 것이 무엇인가?
