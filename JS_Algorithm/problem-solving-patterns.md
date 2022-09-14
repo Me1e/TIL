@@ -72,3 +72,56 @@
   ```
 
   > Note: You may assume the string contains only lowercase alphabets.
+
+- My solution : O(n)
+
+  ```js
+  function validAnagram(str1, str2) {
+    if (str1.length !== str2.length) {
+      return false;
+    }
+    let fc1 = {};
+    let fc2 = {};
+    for (let s of str1) {
+      fc1[s] = (fc1[s] || 0) + 1;
+    }
+    for (let s of str2) {
+      fc2[s] = (fc2[s] || 0) + 1;
+    }
+    for (let key in fc1) {
+      if (!(key in fc2)) {
+        return false;
+      }
+      if (fc1[key] !== fc2[key]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  ```
+
+- Insturctor's solution: O(n)
+
+  ```js
+  function validAnagram(first, second) {
+    if (first.length !== second.length) {
+      return false;
+    }
+    const lookup = {};
+    for (let i = 0; i < first.length; i++) {
+      let letter = first[i];
+      // if letter exists, increment, otherwise set to 1
+      lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
+    }
+    for (let i = 0; i < second.length; i++) {
+      let letter = second[i];
+      // can't find letter or letter is zero then it's not an anagram
+      if (!lookup[letter]) {
+        return false;
+      } else {
+        lookup[letter] -= 1;
+      }
+    }
+    return true;
+  }
+  ```
